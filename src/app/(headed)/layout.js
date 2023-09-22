@@ -15,10 +15,12 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} selection:bg-blue-100/80 grid grid-rows-[auto_1fr]`}>
         <header className="sticky top-0 z-40 backdrop-blur bg-white/95">
           <div className="grid grid-cols-[1fr_auto_1fr] px-14 py-3 items-center max-w-[86rem] mx-auto">
-            <Link href="/" className="text-lg">
-              <span className="font-bold text-slate-800">Astro</span>
-              <span className="text-slate-500">ship</span>
-            </Link>
+            <div>
+              <Link href="/" className="text-lg">
+                <span className="font-bold text-slate-800">Astro</span>
+                <span className="text-slate-500">ship</span>
+              </Link>
+            </div>
 
             <nav>
               <ul className="flex text-sm">
@@ -26,7 +28,7 @@ export default function RootLayout({ children }) {
                 <li className="px-3 py-2 text-gray-600 hover:text-gray-900">Pricing</li>
                 <li className="px-3 py-2 text-gray-600 hover:text-gray-900">About</li>
 
-                <Link href="/blog" className="px-3 py-2 text-gray-600 hover:text-gray-900">
+                <Link href="/posts" className="px-3 py-2 text-gray-600 hover:text-gray-900">
                   Blog
                 </Link>
 
