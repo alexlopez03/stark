@@ -5,7 +5,7 @@ import { Components } from "@/components/mdx-components";
 
 export default function Page({ params }) {
   const post = allPosts.find((post) => post.pid === params.pid);
-  if (!post) return redirect("/blog");
+  if (!post) return redirect("/posts");
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
