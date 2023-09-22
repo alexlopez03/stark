@@ -2,8 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "css/*": ["src/styles/*.css"]
-      // "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "css/*": ["src/styles/*.css"],
+      "content/generated": ["./.contentlayer/generated"]
     }
-  }
+  },
+  "include": ["src/**/*", ".contentlayer/generated"]
 }
