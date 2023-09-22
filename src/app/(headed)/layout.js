@@ -12,9 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} selection:bg-blue-100/80`}>
-        <div className="grid grid-rows-[auto_1fr]">
-          <header className="grid grid-cols-[1fr_auto_1fr] px-14 py-3 items-center sticky top-0 z-40 backdrop-blur transition-colors duration-500 bg-white/95">
+      <body className={`${inter.className} selection:bg-blue-100/80 grid grid-rows-[auto_1fr]`}>
+        <header className="sticky top-0 z-40 backdrop-blur bg-white/95">
+          <div className="grid grid-cols-[1fr_auto_1fr] px-14 py-3 items-center max-w-[86rem] mx-auto">
             <Link href="/" className="text-lg">
               <span className="font-bold text-slate-800">Astro</span>
               <span className="text-slate-500">ship</span>
@@ -40,10 +40,10 @@ export default function RootLayout({ children }) {
               <button>Log in</button>
               <button className="rounded text-center px-4 py-2 bg-black text-white hover:bg-gray-800 border-2 border-transparent">Sign up</button>
             </div>
-          </header>
+          </div>
+        </header>
 
-          <main>{children}</main>
-        </div>
+        <main className="w-full max-w-[86rem] mx-auto">{children}</main>
       </body>
     </html>
   );
